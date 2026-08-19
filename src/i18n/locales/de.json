@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "mapimages",
+    "tagline": "Kartenposter-Pipeline von travlr-earth"
+  },
+  "nav": {
+    "themes": "Themen",
+    "formats": "Formate",
+    "openApp": "App öffnen"
+  },
+  "poster": {
+    "city": "Stadt",
+    "country": "Land",
+    "coordinates": "Koordinaten",
+    "typography": "Typografie",
+    "gradient": "Verlaufsfades",
+    "style": "Kartenstil",
+    "showText": "Postertext anzeigen",
+    "showOverlay": "Verlauf anzeigen"
+  },
+  "gradients": {
+    "label": "Fade-Stil",
+    "vignette": "Vignette (oben + unten)",
+    "topOnly": "Nur oben",
+    "bottomOnly": "Nur unten",
+    "none": "Keiner"
+  },
+  "fonts": {
+    "label": "Schriftart",
+    "display": "Display",
+    "serif": "Serif",
+    "sansSerif": "Serifenlos",
+    "mono": "Monospace",
+    "script": "Schreibschrift",
+    "system": "System"
+  },
+  "export": {
+    "download": "Herunterladen",
+    "format": "Format",
+    "resolution": "Auflösung",
+    "batch": "Batch exportieren",
+    "zip": "ZIP herunterladen",
+    "progress": "Wird exportiert…"
+  },
+  "formats": {
+    "print": "Druck",
+    "social": "Social Media",
+    "stories": "Stories",
+    "wallpaper": "Hintergrundbild",
+    "web": "Web",
+    "count": "{n} Formate"
+  },
+  "locations": {
+    "placeholder": "Stadt suchen…",
+    "search": "Suchen",
+    "current": "Meinen Standort verwenden"
+  }
+}

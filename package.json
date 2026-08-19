@@ -1,0 +1,50 @@
+{
+  "name": "map-images",
+  "version": "0.1.0",
+  "description": "Map poster render pipeline for travlr-earth: print-ready and social-format map posters for any city",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "bunx --bun vite --host",
+    "build": "bunx --bun vite build",
+    "build:render": "bunx --bun vite build --config vite.config.render.js",
+    "preview": "bunx --bun vite preview --host",
+    "typecheck": "tsc --noEmit",
+    "styles:generate": "npx tsx --tsconfig tsconfig.json scripts/generate-map-styles.ts",
+    "fonts:generate-preload": "npx tsx --tsconfig tsconfig.json scripts/generate-font-preload.ts",
+    "showcase:grid": "node scripts/combine-showcase-grid.mjs"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "maplibre-gl": "^5.19.0",
+    "pmtiles": "^3.2.1",
+    "react": "^18.3.1",
+    "react-colorful": "^5.6.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "rollup": "^4.59.0"
+  },
+  "devDependencies": {
+    "@fontsource/bebas-neue": "^5.2.7",
+    "@fontsource/dancing-script": "^5.2.8",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "@fontsource/lato": "^5.2.7",
+    "@fontsource/merriweather": "^5.2.11",
+    "@fontsource/montserrat": "^5.2.8",
+    "@fontsource/noto-sans-jp": "^5.2.9",
+    "@fontsource/noto-serif-jp": "^5.2.8",
+    "@fontsource/oswald": "^5.2.8",
+    "@fontsource/pacifico": "^5.2.7",
+    "@fontsource/playfair-display": "^5.2.8",
+    "@fontsource/raleway": "^5.2.8",
+    "@fontsource/source-sans-pro": "^5.2.5",
+    "@fontsource/space-mono": "^5.2.9",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.4.1",
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.11"
+  }
+}

@@ -1,0 +1,17 @@
+import type { Location } from "./types";
+
+export interface IGeocodePort {
+  searchLocations(query: string, limit?: number, signal?: AbortSignal): Promise<Location[]>;
+  geocodeLocation(query: string): Promise<Location>;
+  reverseGeocode(lat: number, lon: number): Promise<Location>;
+  geocodeCity(
+    city: string,
+    country: string,
+  ): Promise<{ lat: number; lon: number; displayName: string }>;
+}
+
+export type GeocodeCityResult = {
+  lat: number;
+  lon: number;
+  displayName: string;
+};

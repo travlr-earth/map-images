@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "mapimages",
+    "tagline": "Pipeline de pósters de mapa por travlr-earth"
+  },
+  "nav": {
+    "themes": "Temas",
+    "formats": "Formatos",
+    "openApp": "Abrir app"
+  },
+  "poster": {
+    "city": "Ciudad",
+    "country": "País",
+    "coordinates": "Coordenadas",
+    "typography": "Tipografía",
+    "gradient": "Difuminados",
+    "style": "Estilo de mapa",
+    "showText": "Mostrar texto",
+    "showOverlay": "Mostrar difuminado"
+  },
+  "gradients": {
+    "label": "Estilo de fade",
+    "vignette": "Viñeta (arriba + abajo)",
+    "topOnly": "Solo arriba",
+    "bottomOnly": "Solo abajo",
+    "none": "Ninguno"
+  },
+  "fonts": {
+    "label": "Fuente",
+    "display": "Display",
+    "serif": "Serif",
+    "sansSerif": "Sin serif",
+    "mono": "Monoespaciada",
+    "script": "Script",
+    "system": "Sistema"
+  },
+  "export": {
+    "download": "Descargar",
+    "format": "Formato",
+    "resolution": "Resolución",
+    "batch": "Exportar lote",
+    "zip": "Descargar ZIP",
+    "progress": "Exportando…"
+  },
+  "formats": {
+    "print": "Impresión",
+    "social": "Redes sociales",
+    "stories": "Stories",
+    "wallpaper": "Fondo de pantalla",
+    "web": "Web",
+    "count": "{n} formatos"
+  },
+  "locations": {
+    "placeholder": "Buscar una ciudad…",
+    "search": "Buscar",
+    "current": "Usar mi ubicación"
+  }
+}

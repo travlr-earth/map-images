@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "mapimages",
+    "tagline": "Map poster pipeline by travlr-earth"
+  },
+  "nav": {
+    "themes": "Themes",
+    "formats": "Formats",
+    "openApp": "Open App"
+  },
+  "poster": {
+    "city": "City",
+    "country": "Country",
+    "coordinates": "Coordinates",
+    "typography": "Typography",
+    "gradient": "Gradient fades",
+    "style": "Map style",
+    "showText": "Show poster text",
+    "showOverlay": "Show gradient overlay"
+  },
+  "gradients": {
+    "label": "Fade style",
+    "vignette": "Vignette (top + bottom)",
+    "topOnly": "Top only",
+    "bottomOnly": "Bottom only",
+    "none": "None"
+  },
+  "fonts": {
+    "label": "Font",
+    "display": "Display",
+    "serif": "Serif",
+    "sansSerif": "Sans-serif",
+    "mono": "Monospace",
+    "script": "Script",
+    "system": "System"
+  },
+  "export": {
+    "download": "Download",
+    "format": "Format",
+    "resolution": "Resolution",
+    "batch": "Export batch",
+    "zip": "Download ZIP",
+    "progress": "Exporting…"
+  },
+  "formats": {
+    "print": "Print",
+    "social": "Social",
+    "stories": "Stories",
+    "wallpaper": "Wallpaper",
+    "web": "Web",
+    "count": "{n} formats"
+  },
+  "locations": {
+    "placeholder": "Search for a city…",
+    "search": "Search",
+    "current": "Use my location"
+  }
+}

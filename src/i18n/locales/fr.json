@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "mapimages",
+    "tagline": "Pipeline d'affiches cartographiques par travlr-earth"
+  },
+  "nav": {
+    "themes": "Thèmes",
+    "formats": "Formats",
+    "openApp": "Ouvrir l'app"
+  },
+  "poster": {
+    "city": "Ville",
+    "country": "Pays",
+    "coordinates": "Coordonnées",
+    "typography": "Typographie",
+    "gradient": "Dégradés",
+    "style": "Style de carte",
+    "showText": "Afficher le texte",
+    "showOverlay": "Afficher le dégradé"
+  },
+  "gradients": {
+    "label": "Style de fondu",
+    "vignette": "Vignette (haut + bas)",
+    "topOnly": "Haut uniquement",
+    "bottomOnly": "Bas uniquement",
+    "none": "Aucun"
+  },
+  "fonts": {
+    "label": "Police",
+    "display": "Display",
+    "serif": "Serif",
+    "sansSerif": "Sans-serif",
+    "mono": "Monospace",
+    "script": "Script",
+    "system": "Système"
+  },
+  "export": {
+    "download": "Télécharger",
+    "format": "Format",
+    "resolution": "Résolution",
+    "batch": "Export par lot",
+    "zip": "Télécharger ZIP",
+    "progress": "Export en cours…"
+  },
+  "formats": {
+    "print": "Impression",
+    "social": "Réseaux sociaux",
+    "stories": "Stories",
+    "wallpaper": "Fond d'écran",
+    "web": "Web",
+    "count": "{n} formats"
+  },
+  "locations": {
+    "placeholder": "Rechercher une ville…",
+    "search": "Rechercher",
+    "current": "Utiliser ma position"
+  }
+}

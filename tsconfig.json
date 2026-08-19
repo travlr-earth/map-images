@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* language + emit */
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "noEmit": true,
+
+    /* modules */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+
+    /* paths */
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+    /* checking — gradual JS→TS migration, so strict stays off */
+    "strict": false,
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>render</title>
+  <!--
+    Fonts used by the poster overlay — preloaded so they render in Playwright.
+    AUTO-GENERATED from src/fonts/registry.ts — do NOT hand-edit the link below.
+    Regenerate with:  npm run fonts:generate-preload
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- FONT-PRELOAD:START -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Oswald:wght@200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Lato:wght@100;300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Space+Mono:wght@400;700&family=Dancing+Script:wght@400;500;600;700&family=Pacifico:wght@400&display=swap" rel="stylesheet">
+  <!-- FONT-PRELOAD:END -->
+  <style>body { margin: 0; background: #000; }</style>
+</head>
+<body>
+  <!-- Playwright reads this canvas once data-done="true" -->
+  <canvas id="render-result"></canvas>
+  <div id="render-error" style="color:red;font-family:monospace;padding:8px"></div>
+
+  <!--
+    Compiled bundle — built by running  npm run build:render  in mapimages/.
+    Exports a global  StoryShare  with { renderStoryCanvas, renderStoryBlob, shareStory }.
+  -->
+  <script src="/render-lib.iife.js"></script>
+  <script>
+    (function () {
+      var params  = new URLSearchParams(location.search);
+      var specJson = params.get("spec");
+      var errEl   = document.getElementById("render-error");
+      var outEl   = document.getElementById("render-result");
+
+      function fail(msg) {
+        errEl.textContent = msg;
+        outEl.dataset.done = "error";
+      }
+
+      if (!specJson) { fail("Missing ?spec= param"); return; }
+
+      var spec;
+      try { spec = JSON.parse(specJson); }
+      catch (e) { fail("Bad JSON: " + e.message); return; }
+
+      if (!window.StoryShare || typeof window.StoryShare.renderStoryCanvas !== "function") {
+        fail("StoryShare bundle not loaded — run: npm run build:render");
+        return;
+      }
+
+      var posterSpec = {
+        themeId:       spec.themeId,
+        city:          spec.city,
+        country:       spec.country,
+        lat:           spec.lat,
+        lon:           spec.lon,
+        zoom:          spec.zoom,
+        fontFamily:    spec.fontFamily    || "Bebas Neue",
+        // 0-1 fraction (applyFades clamps to this range) -- was hardcoded to 85 here,
+        // which silently clamped to full-strength (1) every time; fixed to match.
+        fadeOpacity:   spec.fadeOpacity   != null ? spec.fadeOpacity   : 1,
+        gradientStyle: spec.gradientStyle || "heavy-bottom",
+        overlayStyle:  spec.overlayStyle  || "classic",
+        textProfile:      spec.textProfile,
+        textBottomMargin: spec.textBottomMargin,
+        showText:      true,
+      };
+
+      window.StoryShare.renderStoryCanvas({
+        variant:           spec.variant,
+        posterSpec:        posterSpec,
+        renderMode:        spec.renderMode,
+        output:            spec.output,
+        marker:            spec.marker,
+        routeFromLatLon:   spec.routeFromLatLon,
+        routeDistanceKm:   spec.routeDistanceKm,
+        routeMinutes:      spec.routeMinutes,
+        stops:             spec.stops,
+        routeName:         spec.routeName,
+        routeTotalKm:      spec.routeTotalKm,
+        routeTotalMinutes: spec.routeTotalMinutes,
+        routeSegments:     spec.routeSegments,
+        routeGpx:          spec.routeGpx,
+        polygonRing:       spec.polygonRing,
+        ctaUrl:            spec.ctaUrl,
+        ctaTagline:        spec.ctaTagline,
+        bannerEvent:       spec.bannerEvent,
+        points:            spec.points,
+        eyebrow:           spec.eyebrow,
+        headline:          spec.headline,
+        stats:             spec.stats,
+        fromName:          spec.fromName,
+      }).then(function (canvas) {
+        outEl.width  = canvas.width;
+        outEl.height = canvas.height;
+        outEl.getContext("2d").drawImage(canvas, 0, 0);
+        outEl.dataset.done = "true";
+      }).catch(function (err) {
+        fail(String(err));
+      });
+    })();
+  </script>
+</body>
+</html>

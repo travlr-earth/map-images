@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "mapimages",
+    "tagline": "Kaartposter pipeline door travlr-earth"
+  },
+  "nav": {
+    "themes": "Thema's",
+    "formats": "Formaten",
+    "openApp": "Open app"
+  },
+  "poster": {
+    "city": "Stad",
+    "country": "Land",
+    "coordinates": "Coördinaten",
+    "typography": "Typografie",
+    "gradient": "Verloopfades",
+    "style": "Kaartstijl",
+    "showText": "Postertekst tonen",
+    "showOverlay": "Verloop tonen"
+  },
+  "gradients": {
+    "label": "Fade-stijl",
+    "vignette": "Vignet (boven + onder)",
+    "topOnly": "Alleen boven",
+    "bottomOnly": "Alleen onder",
+    "none": "Geen"
+  },
+  "fonts": {
+    "label": "Lettertype",
+    "display": "Display",
+    "serif": "Serif",
+    "sansSerif": "Schreefloos",
+    "mono": "Monospace",
+    "script": "Script",
+    "system": "Systeem"
+  },
+  "export": {
+    "download": "Downloaden",
+    "format": "Formaat",
+    "resolution": "Resolutie",
+    "batch": "Batch exporteren",
+    "zip": "ZIP downloaden",
+    "progress": "Exporteren…"
+  },
+  "formats": {
+    "print": "Print",
+    "social": "Social media",
+    "stories": "Stories",
+    "wallpaper": "Achtergrond",
+    "web": "Web",
+    "count": "{n} formaten"
+  },
+  "locations": {
+    "placeholder": "Zoek een stad…",
+    "search": "Zoeken",
+    "current": "Gebruik mijn locatie"
+  }
+}

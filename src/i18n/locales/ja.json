@@ -1,0 +1,58 @@
+{
+  "app": {
+    "name": "mapimages",
+    "tagline": "travlr-earthによるマップポスターパイプライン"
+  },
+  "nav": {
+    "themes": "テーマ",
+    "formats": "フォーマット",
+    "openApp": "アプリを開く"
+  },
+  "poster": {
+    "city": "都市",
+    "country": "国",
+    "coordinates": "座標",
+    "typography": "タイポグラフィ",
+    "gradient": "グラデーション",
+    "style": "マップスタイル",
+    "showText": "テキストを表示",
+    "showOverlay": "オーバーレイを表示"
+  },
+  "gradients": {
+    "label": "フェードスタイル",
+    "vignette": "ビネット（上下）",
+    "topOnly": "上のみ",
+    "bottomOnly": "下のみ",
+    "none": "なし"
+  },
+  "fonts": {
+    "label": "フォント",
+    "display": "ディスプレイ",
+    "serif": "セリフ",
+    "sansSerif": "サンセリフ",
+    "mono": "等幅",
+    "script": "スクリプト",
+    "system": "システム"
+  },
+  "export": {
+    "download": "ダウンロード",
+    "format": "フォーマット",
+    "resolution": "解像度",
+    "batch": "一括エクスポート",
+    "zip": "ZIPをダウンロード",
+    "progress": "エクスポート中…"
+  },
+  "formats": {
+    "print": "印刷",
+    "social": "ソーシャル",
+    "stories": "ストーリーズ",
+    "wallpaper": "壁紙",
+    "web": "ウェブ",
+    "count": "{n}フォーマット"
+  },
+  "locations": {
+    "placeholder": "都市を検索…",
+    "search": "検索",
+    "current": "現在地を使用"
+  }
+}

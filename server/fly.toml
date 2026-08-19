@@ -1,0 +1,31 @@
+app = "mapimages-render"
+primary_region = "ams"   # Amsterdam — close to openfreemap tile servers
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "3001"
+  NODE_ENV = "production"
+
+[http_service]
+  internal_port = 3001
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1   # keep one warm to avoid cold-start on first request
+
+[[vm]]
+  memory = "2gb"             # Chrome needs headroom
+  cpu_kind = "shared"
+  cpus = 2
+
+[checks]
+  [checks.alive]
+    grace_period = "10s"
+    interval = "15s"
+    method = "get"
+    path = "/health"
+    port = 3001
+    timeout = "5s"
+    type = "http"
