@@ -28,9 +28,9 @@
 [CmdletBinding()]
 param(
   [string]$FlyApp        = "mapimages-render",
-  [string]$ProjectRef    = "vafmymyjxabkgkijcatd",
+  [string]$ProjectRef    = "",   # default: the host's first label in SUPABASE.url (shared-config.json)
   [string]$WorkerUrl     = "https://mapimages-render.fly.dev",
-  [string]$SupabaseUrl   = "https://vafmymyjxabkgkijcatd.supabase.co",
+  [string]$SupabaseUrl   = "",   # default: SUPABASE.url from the shared config (server/shared-config.json)
   # Secrets (fall back to env vars). Leave RenderSecret empty to auto-generate.
   [string]$ServiceRoleKey = $env:SUPABASE_SERVICE_ROLE_KEY,
   [string]$RenderSecret   = $env:RENDER_SECRET,
@@ -43,6 +43,13 @@ param(
 $ErrorActionPreference = "Stop"
 $RepoRoot   = Resolve-Path (Join-Path $PSScriptRoot "..")
 $ServerDir  = $PSScriptRoot
+
+# The project address comes from the shared config, pinned from the shared home (shared.lock.json; node ../tools/shared.mjs resolve), never written out here.
+$SharedConfig = Join-Path $ServerDir "shared-config.json"
+if (-not (Test-Path $SharedConfig)) { throw "server/shared-config.json is missing: run  node tools/shared.mjs resolve  from the repo root" }
+$Shared = (Get-Content $SharedConfig -Raw | ConvertFrom-Json).SUPABASE
+if (-not $SupabaseUrl) { $SupabaseUrl = $Shared.url }
+if (-not $ProjectRef)  { $ProjectRef  = ([uri]$SupabaseUrl).Host.Split(".")[0] }
 
 function Step($msg) { Write-Host "`n=== $msg ===" -ForegroundColor Cyan }
 function Need($cmd) {
