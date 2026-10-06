@@ -44,3 +44,7 @@ updates.json
 
 # local render cache (worker output when running without Supabase)
 server/renders-local/
+# shared:begin (tools/shared.mjs: resolved from the shared home, never committed)
+.shared-cache/
+server/shared-config.json
+# shared:end

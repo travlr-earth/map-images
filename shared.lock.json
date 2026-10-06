@@ -1,0 +1,9 @@
+{
+ "origin": "https://www.travlr.earth",
+ "files": {
+  "config.json": {
+   "sha256": "544537a93d2196d5f6fde97960994f2ec81d07c6cd94fd50238d1b6930569534",
+   "to": "server/shared-config.json"
+  }
+ }
+}
